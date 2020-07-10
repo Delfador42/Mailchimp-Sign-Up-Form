@@ -1,3 +1,6 @@
+//This is built using the MailChimp api refrence:  https://mailchimp.com/developer/guides/get-started-with-mailchimp-api-3/
+
+
 //jshint esversion:6
 const express = require('express');
 const bodyParser = require("body-parser");
@@ -5,6 +8,10 @@ const https = require("https");
 const request = require("request");
 
 const app = express();
+
+
+
+
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -78,10 +85,11 @@ app.post("/", function(req, res) {
 // Notice that I used to listen on port 3000 and am now listening on process.enve.PORT note that the word PORT must be in caps
 //from app.listen(3000, function() { to:  app.listen(process.env.PORT || 3000, function() {
 app.listen(process.env.PORT || 3000, function() {
-  console.log("servers up");
+  console.log("servers up on localhost: 3000");
 });
 
 
+//This is built using the MailChimp api refrence:  https://mailchimp.com/developer/guides/get-started-with-mailchimp-api-3/
 
 // Mail chimp api key
 // edefe58885d20a2ad7dd0b68766090fe-us4
